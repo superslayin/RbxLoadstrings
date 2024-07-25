@@ -1,7 +1,7 @@
 if getgenv().SmplSpiExecuted and type(getgenv().SmplSpiShutdown) == "function" then
     getgenv().SmplSpiShutdown()
 end
-
+print("TESTTESTESTES")
 local realconfigs = {
     logcheckcaller = false,
     autoblock = false,
