@@ -220,7 +220,7 @@ function ErrorPrompt(Message,state)
     end
 end
 
-local Highlight = (isfile and loadfile and isfile("Highlight.lua") and loadfile("Highlight.lua")()) or loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SmplSpi/main/Highlight.lua"))()
+local Highlight = (isfile and loadfile and isfile("Highlight.lua") and loadfile("Highlight.lua")()) or loadstring(game:HttpGet("https://raw.githubusercontent.com/78n/SimpleSpy/main/Highlight.lua"))()
 
 local SmplSpi3 = Create("ScreenGui",{ResetOnSpawn = false})
 local Storage = Create("Folder",{})
