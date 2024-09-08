@@ -1,4 +1,3 @@
-print("test")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local API = ReplicatedStorage:FindFirstChild("API")
 if not API then warn("API folder not found") return end
@@ -6,7 +5,8 @@ if not API then warn("API folder not found") return end
 local apiMasterTable = {} -- Master table from API folder
 local customMasterTable = {
     -- Example custom entries
-    {CustomName = "MyCustomName1", Type = "RemoteFunction", Length = 31, Arguments = {game.Players.voidhammer1}}
+    {CustomName = "MyCustomName1", Type = "RemoteFunction", Length = 31, Arguments = {game.Players.voidhammer1}},
+    -- Add more entries if needed
 }
 
 -- Build API master table
@@ -43,11 +43,11 @@ local function processRemote(customName)
             local remoteObj = remote.Object
             if customDetails.Type == "RemoteFunction" and remoteObj:IsA("RemoteFunction") then
                 print("Invoking RemoteFunction:", remoteObj.Name)
-                local success, result = pcall(remoteObj.InvokeServer, remoteObj, unpack(customDetails.Arguments))
+                local success, result = pcall(function() return remoteObj:InvokeServer(unpack(customDetails.Arguments)) end)
                 print(success and "Success:" or "Error:", remoteObj.Name, result)
             elseif customDetails.Type == "RemoteEvent" and remoteObj:IsA("RemoteEvent") then
                 print("Firing RemoteEvent:", remoteObj.Name)
-                local success, result = pcall(remoteObj.FireServer, remoteObj, unpack(customDetails.Arguments))
+                local success, result = pcall(function() return remoteObj:FireServer(unpack(customDetails.Arguments)) end)
                 print(success and "Success:" or "Error:", remoteObj.Name, result)
             end
         end
