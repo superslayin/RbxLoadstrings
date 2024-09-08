@@ -1,3 +1,4 @@
+print("test")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local API = ReplicatedStorage:FindFirstChild("API")
 if not API then warn("API folder not found") return end
