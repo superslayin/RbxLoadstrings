@@ -51,6 +51,7 @@ local function processRemote(customName)
                 local success, result = pcall(function() return remoteObj:FireServer(unpack(customDetails.Arguments)) end)
                 print(success and "Success:" or "Error:", remoteObj.Name, result)
             end
+            wait(.5)
         end
     end
 end
