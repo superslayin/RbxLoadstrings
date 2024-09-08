@@ -6,6 +6,7 @@ local apiMasterTable = {} -- Master table from API folder
 local customMasterTable = {
     -- Example custom entries
     {CustomName = "MyCustomName1", Type = "RemoteFunction", Length = 31, Arguments = {game.Players.voidhammer1}},
+    {CustomName = "MyCustomName2", Type = "RemoteEvent", Length = 25, Arguments = {"celestial_2024_pass_4"}}
     -- Add more entries if needed
 }
 
@@ -58,4 +59,5 @@ end
 local customName = "MyCustomName1" -- Replace with the custom name you're using
 processRemote(customName)
 wait(5)
+customName = "MyCustomName2"
 processRemote(customName)
