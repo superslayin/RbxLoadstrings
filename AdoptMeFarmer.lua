@@ -57,3 +57,5 @@ end
 -- Example usage
 local customName = "MyCustomName1" -- Replace with the custom name you're using
 processRemote(customName)
+wait(5)
+processRemote(customName)
