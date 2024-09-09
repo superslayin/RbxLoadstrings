@@ -1,4 +1,5 @@
 # Declare the necessary variables and services
+print("TEST")
 Players = game.Players
 localPlayer = Players.LocalPlayer
 VirtualInputManager = game:GetService("VirtualInputManager")
