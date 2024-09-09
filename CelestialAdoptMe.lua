@@ -1,5 +1,6 @@
 # Declare the necessary variables and services
 print("TEST")
+--[[
 Players = game.Players
 localPlayer = Players.LocalPlayer
 VirtualInputManager = game:GetService("VirtualInputManager")
@@ -52,3 +53,4 @@ else:
                     # Simulate a click on the ClaimButton
                     x, y = getButtonCoords(claimButton)
                     simulateMouseClick(x, y)
+--]]
